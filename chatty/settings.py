@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-		'comms.apps.CommsConfig',
+    'comms.apps.CommsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,10 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'chatty',
-				'USER': 'megatron',
-				'PASSWORD': 'terrorise',
-				'HOST': 'localhost',
-				'PORT': '',
+	'USER': 'megatron',
+	'PASSWORD': 'terrorise',
+	'HOST': 'localhost',
+	'PORT': '',
     }
 }
 

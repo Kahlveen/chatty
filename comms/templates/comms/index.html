@@ -5,7 +5,7 @@
 </div>
 
 <div>
-	<form action="/send_msg/" method="post">
+	<form action="send_msg" method="post">
 		{% csrf_token %}
 		<input id="send_msg" type="text" name="send_msg" value="">
 		<input type="submit" value="Send" />
