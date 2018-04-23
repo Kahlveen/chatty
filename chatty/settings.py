@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jquery',
+    'bootstrap4',
     'comms.apps.CommsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

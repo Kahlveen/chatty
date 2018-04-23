@@ -1,10 +1,21 @@
-<div>
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% load static %}
+<script type="text/javascript" src="{% static 'comms/js/jquery-3.3.1.min.js' %}"></script>
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'comms/css/style.css' %}" /> -->
+
+
+<div class="container">
 	{% for m in chat_msgs %}
 		<li> {{m.msg}}</li>
 	{% endfor %}
 </div>
 
-<div>
+<div class="container">
 	<form action="send_msg" method="post">
 		{% csrf_token %}
 		<input id="send_msg" type="text" name="send_msg" value="">
