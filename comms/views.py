@@ -25,5 +25,5 @@ def send_msg(request):
     return render(request, 'comms/index.html', get_chat_msg())
 
 def get_chat_msg():
-    chat_msgs = ChatMsg.objects.order_by('-send_date')[:5]
+    chat_msgs = ChatMsg.objects.order_by('-send_date')[:20]
     return {'chat_msgs': reversed(chat_msgs)}

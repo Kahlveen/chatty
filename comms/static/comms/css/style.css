@@ -9,3 +9,20 @@
 .col-6 {
 	border: 2px solid blue;
 }
+
+#main-chat-box {
+	height: 70vh;
+}
+
+.send-msg-box {
+	width: 85%;
+	margin: 5 auto;
+}
+/*
+.text-left {
+	background: light green;
+}
+
+.text-right {
+
+}*/

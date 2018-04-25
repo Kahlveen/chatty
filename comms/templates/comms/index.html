@@ -11,24 +11,26 @@
 <div class="container">
 
 	<div class="row">
-	<div class="col-3">
-		blah blah
-	</div> <!-- To center the col-6 below -->
+		<div class="col-3"></div> <!-- To center the col-6 below -->
 
-	<!-- To add in a contacts panel on the left -->
-	<div class="col-6">
-		{% for m in chat_msgs %}
-			<li> {{m.msg}}</li>
-		{% endfor %}
+		<!-- To add in a contacts panel on the left -->
+		<div class="col-6" id="main-chat-box">
+			{% for m in chat_msgs %}
+				<li> {{m.msg}}</li>
+			{% endfor %}
+		</div>
 	</div>
 </div>
-</div>
+
 <div class="container">
-	<div class="col-6">
-		<form action="send_msg" method="post">
-			{% csrf_token %}
-			<input id="send_msg" type="text" name="send_msg" value="">
-			<input type="submit" class="btn btn-primary" value="Send" />
-		</form>
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-6">
+			<form action="send_msg" method="post">
+				{% csrf_token %}
+				<input class="send-msg-box" id="send_msg" type="text" name="send_msg" placeholder="Type a message">
+				<input type="submit" class="btn btn-primary" value="Send" />
+			</form>
+		</div>
 	</div>
 </div>
